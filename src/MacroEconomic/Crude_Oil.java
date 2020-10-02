@@ -155,7 +155,7 @@ public void orderStatus(int orderId, String status, double filled,
 }
 
 int h, m, s, ms;
-public void getmyfuckingtime() {
+public void getTime() {
     Calendar calendar = Calendar.getInstance();
     h = calendar.get(Calendar.HOUR);
     m = calendar.get(Calendar.MINUTE);
@@ -165,13 +165,13 @@ public void getmyfuckingtime() {
 
 public void execDetails(int reqId, Contract contract, Execution execution) {
     endTime = System.currentTimeMillis();
-    getmyfuckingtime();
+    getTime();
     Log.getInstance().log("After execution: " + h + ":" + m + ":" + s + ":" + ms);
     Log.getInstance().log("Total Time: " + (endTime-startTime));
     Log.getInstance().outputToConsole();
 //        System.out.println("That took: " + (endTime-startTime) + "ms");
     filledprice = execution.m_price;
-        //System.out.println("filled price: " + filledprice);
+    System.out.println("filled price: " + filledprice);
     contract.m_localSymbol = symbol;
     contract.m_secType = "FUT";
     contract.m_exchange = "NYMEX";
