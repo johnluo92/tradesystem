@@ -118,7 +118,6 @@ public final class Crude_Oil implements EWrapper {
     }
 }
 
-//    }
 public void run() {
 
     double value = -20;
@@ -129,7 +128,7 @@ public void run() {
         Logger.getLogger(Try_Me.class.getName()).log(Level.SEVERE, null, ex);
     }
 
-        //test^^
+//test^^
 
 //         startTime = System.currentTimeMillis();
 //        ScraperCallback<String, Double> cb = (err, value) -> {
@@ -169,7 +168,7 @@ public void execDetails(int reqId, Contract contract, Execution execution) {
     Log.getInstance().log("After execution: " + h + ":" + m + ":" + s + ":" + ms);
     Log.getInstance().log("Total Time: " + (endTime-startTime));
     Log.getInstance().outputToConsole();
-//        System.out.println("That took: " + (endTime-startTime) + "ms");
+    System.out.println("That took: " + (endTime-startTime) + "ms");
     filledprice = execution.m_price;
     System.out.println("filled price: " + filledprice);
     contract.m_localSymbol = symbol;
