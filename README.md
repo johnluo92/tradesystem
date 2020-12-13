@@ -1,7 +1,7 @@
 # tradesystem
 Automated trading system using Interactive Brokers API to place event-driven positions
 
-Link to published project: https://www.quantopian.com/posts/high-sharpe-weekly-strategy
+Link to published project: <s>https://www.quantopian.com/posts/high-sharpe-weekly-strategy</s> ***please see note
 
 A fully functional automated trading system designed to trade around weekly EIA crude oil production output event.
 
@@ -12,3 +12,5 @@ This project contains two parts.
 2nd part: The live trade system, built using Java in NetBeans interfacing with Interactive Brokers's Trader Workstation (TWS) application programming interface (API), essentially performs the weekly trade in a real event driven environment. A critical component of the live system contains a technology customized to run multiple instances of web scrapers to grab the EIA output number at exactly 10:30 AM on Wednesday. This sends the first successfully scraped value to the DataListener class that immediately places an order to long/short the defined front month Crude Oil contract given there is a connection between the client application to TWS. The ordering syntax contains defined criteras such as quantity, type of order, etc. and also importantly a stop-loss limit order (and profit taking) attached to the trade.
 
 A separate shell script was written to call for the orders to be exited for either a loss or profit, allowing the user to decide at the time of the event.
+
+***Note: (Quantopian is a community sourced algorithmic trading development/execution engine. However as of November 2020, the business as shut down and is no longer able to provide backtesting and/or development of trading algorithms. Open sources libraries such as zipline, pyfolio, etc are still on github: https://github.com/quantopian. For an alterntive resource, please visit quantrocket.com, a similar engine for algorithmic trading development.)
